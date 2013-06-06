@@ -9,6 +9,15 @@ java-one-liners
 * Apache commons-are-you-noticing-a-trend-yet ...
 * Google Guava 
 
+## IDE Shortcuts
+If you are using Eclipse, you can add many of the following static utility classes as favorites.
+* Preferences > Java > Editor > Content Assist > Favorites
+* Add New Type
+* Type in the name of the class, such as org.apache.commons.lang3.StringUtils
+* OK
+* Back in an editor window, type the name of one of the methods minus the class name, such as isBlank (from StringUtils),
+and invoke code completion (CTRL+Space on Windows) - you should see StringUtils.join as the first choice in the code completion popup.
+
 ## Strings
 ``` java
 // org.apache.commons.lang3.RandomStringUtils
