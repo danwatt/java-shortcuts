@@ -90,3 +90,12 @@ IOUtils.closeQuietly(inputStream);      //Close an input stream without throwing
 HexDump.dump(data, 0, System.out, 0);   //Write a hex dump of data (byte[]) to System.out
 
 ```
+
+## Objects
+``` java
+//One-line replacement for overridden equals() and hashCode() methods:
+//org.apache.commons.lang3.builder.EqualsBuilder
+EqualsBuilder.reflectionEquals(this,other);
+//org.apache.commons.lang3.builder.HashCodeBuilder
+HashCodeBuilder.reflectionHashCode(this);
+```
