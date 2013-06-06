@@ -41,6 +41,7 @@ StringUtils.isEmpty("   ");                 //false
 StringUtils.isEmpty("\t\t");                //false
 StringUtils.isEmpty("Something");           //false
 StringUtils.isNotEmpty("Something");        //true
+StringUtils.join(new String[]{"A","B","C"},", "); //"A, B, C"
 ```
 ## Collections
 
