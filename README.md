@@ -25,6 +25,9 @@ WordUtils.initials("hello WORLD");          //hW
 // org.apache.commons.codec.digest.DigestUtils
 DigestUtils.shaHex("hello world");          //2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
 
+//com.google.common.hash.Hashing
+Hashing.sha1().hashString("hello world").toString(); //2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
+
 //org.apache.commons.lang3.StringUtils
 StringUtils.isBlank(null);                  //true
 StringUtils.isBlank("");                    //true
@@ -68,4 +71,22 @@ Collection<String> immutable = Collections.unmodifiableCollection(myList);
 CollectionUtils.isEmpty(null);                //true
 CollectionUtils.isEmpty(emptyArray);          //true
 CollectionUtils.isEmpty(Arrays.asList("A"));  //false
+
+//Google Guava Collections
+//com.google.common.collect.Lists
+List<String> l = Lists.newArrayList("A","B","C");
+List<List<String>> lol = Lists.partition(Lists.newArrayList("A","B","C","D"), 2); // Creates [[A,B],[C,D]]
+```
+
+## IO
+``` java
+//org.apache.commons.io.FileUtils
+List<String> lines = FileUtils.readLines(new File("/tmp/test.txt"));
+FileUtils.writeLines(new File("/tmp/test.txt"), Arrays.asList("A","B","C"));
+String contents = FileUtils.readFileToString(new File("/tmp/test.txt"));
+
+//org.apache.commons.io.IoUtils
+IOUtils.closeQuietly(inputStream);      //Close an input stream without throwing an IOException
+HexDump.dump(data, 0, System.out, 0);   //Write a hex dump of data (byte[]) to System.out
+
 ```
