@@ -39,3 +39,33 @@ StringUtils.isEmpty("\t\t");                //false
 StringUtils.isEmpty("Something");           //false
 StringUtils.isNotEmpty("Something");        //true
 ```
+## Collections
+
+``` java
+//java.util.Arrays
+//Create a List
+List<String> myList = Arrays.asList("A","B","C");
+
+//java.util.Collections
+//Sort a List in place
+Collections.sort(myList);
+
+//Reverse a List
+Collections.reverse(myList);
+
+//Randomize a List
+Collections.shuffle(myList);
+
+//Create am immutable collection of one item
+Set<String> set = Collections.singleton("Value");
+List<String> list = Collections.singletonList("Value");
+Map<String,String> map = Collections.singletonMap("Key","Value");
+
+//Wrap a collection so that it is immutable
+Collection<String> immutable = Collections.unmodifiableCollection(myList);
+
+//Apache commons-collections
+CollectionUtils.isEmpty(null);                //true
+CollectionUtils.isEmpty(emptyArray);          //true
+CollectionUtils.isEmpty(Arrays.asList("A"));  //false
+```
