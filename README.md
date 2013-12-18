@@ -31,6 +31,9 @@ WordUtils.uncapitalize("hello WORLD");      //hello wORLD
 WordUtils.capitalizeFully("hello WORLD");   //Hello World
 WordUtils.initials("hello WORLD");          //hW
 
+//org.apache.commons.lang3.CharSetUtils
+CharSetUtils.keep("(555) 555-1212","1234567890"); //5555551212 - String a phone number of all but digits
+
 // org.apache.commons.codec.digest.DigestUtils
 DigestUtils.shaHex("hello world");          //2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
 
