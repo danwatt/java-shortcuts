@@ -59,7 +59,7 @@ StringUtils.join(new String[]{"A","B","C"},", "); //"A, B, C"
 
 ``` java
 //java.util.Arrays
-//Create a List
+//Create an Immutable List
 List<String> myList = Arrays.asList("A","B","C");
 
 //java.util.Collections
@@ -87,7 +87,7 @@ CollectionUtils.isEmpty(Arrays.asList("A"));  //false
 
 //Google Guava Collections
 //com.google.common.collect.Lists
-List<String> l = Lists.newArrayList("A","B","C");
+List<String> l = Lists.newArrayList("A","B","C"); //Mutable
 List<List<String>> lol = Lists.partition(Lists.newArrayList("A","B","C","D"), 2); // Creates [[A,B],[C,D]]
 ```
 
